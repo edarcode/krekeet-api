@@ -3,6 +3,7 @@ import cors from "cors";
 import { welcomeRouter } from "../modules/welcome/welcomeRoute";
 import { routeNotFoundHandler } from "./routeNotFoundHandler";
 import { errorHandler } from "./errHandler";
+import { sendMailRoute } from "../modules/sendMail/sendMailRoute";
 
 // server
 
@@ -16,6 +17,7 @@ server.use(express.json());
 // routes
 
 server.use("", welcomeRouter);
+server.use("/send_mail", sendMailRoute);
 
 // handlers
 
