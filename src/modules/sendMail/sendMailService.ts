@@ -1,6 +1,6 @@
-import { sendMail } from "../../services/sendMail";
 import { SendMail } from "./sendMailDto";
+import { sendMailFromToService } from "./sendMailFromToService";
 
-export const sendMailService = async (params: SendMail) => {
-  return await sendMail(params.from, params.msg);
+export const sendMailService = async ({ from, ...data }: SendMail) => {
+  return await sendMailFromToService(from, { ...data });
 };

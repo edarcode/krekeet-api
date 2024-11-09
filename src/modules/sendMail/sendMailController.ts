@@ -4,11 +4,10 @@ import { sendMailService } from "./sendMailService";
 
 export const sendMailController: Controller = async (_req, res, next) => {
   try {
-    const { from, msg } = res.locals.body as SendMail;
-    const result = await sendMailService({ from, msg });
-    console.log(result);
+    const data = res.locals.body as SendMail;
+    await sendMailService({ ...data });
 
-    res.status(200).json(result);
+    res.status(200).json({ msg: "Msg enviado correctamente." });
   } catch (error) {
     next(error);
   }
