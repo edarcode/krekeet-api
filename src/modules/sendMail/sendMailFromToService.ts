@@ -23,18 +23,27 @@ export const sendMailFromToService = async (
             <td style="padding: 10px; font-weight: bold; background-color: #f4f4f4;">Mensaje:</td>
             <td style="padding: 10px;">${msg || "Sin mensaje"}</td>
           </tr>
+
           <tr>
             <td style="padding: 10px; font-weight: bold; background-color: #f4f4f4;">Nombre:</td>
             <td style="padding: 10px;">${name}</td>
           </tr>
+
+          <tr>
+            <td style="padding: 10px; font-weight: bold; background-color: #f4f4f4;">Correo:</td>
+            <td style="padding: 10px;">${from || "Sin correo"}</td>
+          </tr>
+
           <tr>
             <td style="padding: 10px; font-weight: bold; background-color: #f4f4f4;">Código de país:</td>
             <td style="padding: 10px;">${countryCode}</td>
           </tr>
+
           <tr>
             <td style="padding: 10px; font-weight: bold; background-color: #f4f4f4;">Número:</td>
             <td style="padding: 10px;">${num}</td>
           </tr>
+          
           <tr>
             <td style="padding: 10px; font-weight: bold; background-color: #f4f4f4;">Servicio:</td>
             <td style="padding: 10px;">${serv}</td>
